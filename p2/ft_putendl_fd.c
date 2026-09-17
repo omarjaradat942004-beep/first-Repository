@@ -6,12 +6,11 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 11:09:32 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/14 14:44:22 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 14:49:48 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -25,10 +24,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-/*
-int main()
-{
-	char str[]="omar jaradat";
-	ft_putendl_fd(str, 1);
-}
-*/

@@ -6,23 +6,17 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 14:48:36 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/14 14:43:04 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 14:14:34 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+
 int	ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 'Z')
 	{
 		c += 32;
 	}
 	return (c);
 }
-/*
-int main()
-{
-        printf("%c",ft_tolower('z'));
-}
-*/

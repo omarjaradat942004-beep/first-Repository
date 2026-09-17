@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 13:43:02 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/14 14:30:51 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 11:14:26 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,9 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-int main()
-{
-        printf("%d",ft_isdigit(9));
-}
-*/

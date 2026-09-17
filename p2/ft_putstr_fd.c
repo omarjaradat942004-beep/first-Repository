@@ -6,12 +6,11 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 09:46:23 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/14 14:45:09 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 14:50:34 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -24,10 +23,3 @@ void	ft_putstr_fd(char *s, int fd)
 		index++;
 	}
 }
-/*
-int main()
-{
-	char str[]="8374";
-	ft_putstr_fd(str, 1);
-}
-*/

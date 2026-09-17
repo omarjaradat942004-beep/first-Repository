@@ -6,15 +6,15 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 15:44:50 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/14 14:42:17 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 13:16:06 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
 	while (s[index] != '\0')
@@ -23,13 +23,3 @@ int	ft_strlen(char *s)
 	}
 	return (index);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	char st[]="leckqwe";
-	char *s=st;
-	printf("%d",ft_strlen(s));
-}
-*/

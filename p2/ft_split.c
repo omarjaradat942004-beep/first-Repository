@@ -6,13 +6,11 @@
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 22:34:14 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/14 14:45:34 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 15:29:53 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-//#include <stdio.h>
 
 int	is_delimiter(char const s, char c)
 {
@@ -53,6 +51,8 @@ char	*copy_str(char const *str, char c)
 	while (str[len] && !is_delimiter(str[len], c))
 		len++;
 	word = malloc((sizeof(char) * len) + 1);
+	if (!word)
+		return (NULL);
 	while (index < len)
 	{
 		word[index] = str[index];
@@ -62,12 +62,28 @@ char	*copy_str(char const *str, char c)
 	return (word);
 }
 
+void	*clean(char **st, size_t index2)
+{
+	size_t	index;
+
+	index = 0;
+	while (index < index2)
+	{
+		free(st[index]);
+		index++;
+	}
+	free(st);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	index;
 	size_t	index2;
 	char	**st;
 
+	index = 0;
+	index2 = 0;
 	st = malloc(sizeof(char *) * (words_number(s, c) + 1));
 	if (!st)
 		return (NULL);
@@ -77,28 +93,11 @@ char	**ft_split(char const *s, char c)
 			index++;
 		st[index2] = copy_str(&s[index], c);
 		if (!st[index2])
-			return (NULL);
+			return (clean(st, index2));
 		index2++;
 		while (s[index] && !is_delimiter(s[index], c))
 			index++;
 	}
-	st[index2] = '\0';
+	st[index2] = NULL;
 	return (st);
 }
-/*
-int main()
-{
-	char const str[]="omar,Khaled,jaradat";
-	char c=',';
-	char **result;
-	size_t	index = 0;
-	result = ft_split(str, c);
-	while (result[index])
-	{
-		printf("word[%ld] = [%s]\n",index,result[index]);
-		free(result[index]);
-		index++;
-	}
-	free(result);	
-}
-*/

@@ -6,13 +6,11 @@
 /*   By: omarjaradat </var/spool/mail/omarjaradat>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 16:16:33 by omarjaradat       #+#    #+#             */
-/*   Updated: 2026/09/14 14:46:51 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 16:02:58 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-//#include <stdio.h>
 
 size_t	str_len(char const *str)
 {
@@ -110,11 +108,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[index] = '\0';
 	return (ptr);
 }
-/*
-int main()
-{
-        char const str[]= "--omar--";
-        char const set[]= "-";
-        printf("%s",ft_strtrim(str, set));
-}
-*/

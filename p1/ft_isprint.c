@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 15:17:02 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/14 14:40:06 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 11:22:43 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,9 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
+	if (c >= ' ' && c <= '~')
 	{
 		return (1);
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	printf("%d",ft_isprint(' '));
-}
-*/

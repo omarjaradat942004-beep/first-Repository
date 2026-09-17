@@ -6,13 +6,12 @@
 /*   By: omarjaradat </var/spool/mail/omarjaradat>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 15:45:13 by omarjaradat       #+#    #+#             */
-/*   Updated: 2026/09/14 14:46:10 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 15:37:07 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-//#include <stdio.h>
+
 size_t	str1_len(char const *str1)
 {
 	size_t	index;
@@ -60,11 +59,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[index] = '\0';
 	return (ptr);
 }
-/*
-int main()
-{
-	char const str1[]= "omar";
-	char const str2[]= "jaradat";
-	printf("%s",ft_strjoin(str1, str2));
-}
-*/

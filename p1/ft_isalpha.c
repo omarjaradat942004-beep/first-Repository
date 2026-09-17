@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 13:27:49 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/14 14:30:25 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/17 10:56:58 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,9 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	printf("%d",ft_isalpha(']'));
-}
-*/
