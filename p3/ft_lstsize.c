@@ -6,7 +6,7 @@
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 14:57:32 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/15 15:30:12 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/18 14:28:39 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,3 @@ unsigned int	ft_lstsize(t_list *lst)
 	}
 	return (counter);
 }
-/*
-int main()
-{
-	t_list head;
-	t_list *head_ptr = &head;
-	t_list node2;
-	t_list node3;
-
-	head.next = &node2;
-	node2.next = &node3;
-	node3.next = NULL;
-	printf("%u",ft_lstsize(head_ptr));
-}
-*/

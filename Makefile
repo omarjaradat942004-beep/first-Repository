@@ -6,7 +6,7 @@
 #    By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/14 13:48:21 by omajarad          #+#    #+#              #
-#    Updated: 2026/09/14 14:12:09 by omajarad         ###   ########.fr        #
+#    Updated: 2026/09/18 21:09:31 by omajarad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,16 @@ SRCS = ft_atoi.c \
        ft_strmapi.c \
        ft_strtrim.c \
        ft_substr.c \
+       ft_lstnew.c \
+       ft_lstadd_front.c \
+       ft_lstsize.c \
+       ft_lstlast.c \
+       ft_lstadd_back.c \
+       ft_lstdelone.c \
+       ft_lstclear.c \
+       ft_lstiter.c \
+       ft_lstmap.c
+
 
 
 

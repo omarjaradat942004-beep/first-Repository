@@ -6,11 +6,13 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 14:51:40 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/18 14:06:36 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/18 14:05:20 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdlib.h>
 #include "libft.h"
+//#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
@@ -23,3 +25,11 @@ t_list	*ft_lstnew(void *content)
 	ptr->next = NULL;
 	return (ptr);
 }
+/*
+int main()
+{
+	void	*ptr = "omar jaradat";
+	printf("%s",(char *)ft_lstnew(ptr)->content);
+
+}
+*/

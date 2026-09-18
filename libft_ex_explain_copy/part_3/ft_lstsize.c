@@ -1,22 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 15:31:03 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/18 14:33:09 by omajarad         ###   ########.fr       */
+/*   Created: 2026/09/15 14:57:32 by omajarad          #+#    #+#             */
+/*   Updated: 2026/09/15 15:30:12 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+unsigned int	ft_lstsize(t_list *lst)
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst ->next != NULL)
-		lst = lst ->next;
-	return (lst);
+	unsigned int	counter;
+
+	counter = 0;
+	while (lst != NULL)
+	{
+		counter++;
+		lst = lst -> next;
+	}
+	return (counter);
 }
+/*
+int main()
+{
+	t_list head;
+	t_list *head_ptr = &head;
+	t_list node2;
+	t_list node3;
+
+	head.next = &node2;
+	node2.next = &node3;
+	node3.next = NULL;
+	printf("%u",ft_lstsize(head_ptr));
+}
+*/
