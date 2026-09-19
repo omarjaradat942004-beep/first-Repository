@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 11:46:37 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/17 14:12:42 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/19 11:02:19 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	index;
-	size_t	c_counter;
+	int		index;
+	int		c_counter;
 	char	*c_index;
 
 	index = 0;
