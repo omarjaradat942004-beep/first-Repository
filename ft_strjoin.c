@@ -6,13 +6,13 @@
 /*   By: omarjaradat </var/spool/mail/omarjaradat>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 15:45:13 by omarjaradat       #+#    #+#             */
-/*   Updated: 2026/09/17 15:37:07 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/19 21:34:44 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	str1_len(char const *str1)
+static size_t	str1_len(char const *str1)
 {
 	size_t	index;
 
@@ -22,7 +22,7 @@ size_t	str1_len(char const *str1)
 	return (index);
 }
 
-size_t	str2_len(char const *str2)
+static size_t	str2_len(char const *str2)
 {
 	size_t	index;
 

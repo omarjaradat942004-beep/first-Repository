@@ -6,13 +6,13 @@
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 17:07:26 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/19 10:24:55 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/19 21:27:35 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	creat_node_fail(void *new_content, t_list **new_lst_head,
+static void	creat_node_fail(void *new_content, t_list **new_lst_head,
 void (*del)(void *))
 {
 	del(new_content);

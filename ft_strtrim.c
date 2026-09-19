@@ -6,13 +6,13 @@
 /*   By: omarjaradat </var/spool/mail/omarjaradat>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 16:16:33 by omarjaradat       #+#    #+#             */
-/*   Updated: 2026/09/17 16:02:58 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/19 21:39:48 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	str_len(char const *str)
+static size_t	str_len(char const *str)
 {
 	size_t	index;
 
@@ -22,7 +22,7 @@ size_t	str_len(char const *str)
 	return (index);
 }
 
-size_t	str_non_set_start(char const *str, char const *se)
+static size_t	str_non_set_start(char const *str, char const *se)
 {
 	size_t	index;
 	size_t	index2;
@@ -47,7 +47,7 @@ size_t	str_non_set_start(char const *str, char const *se)
 	return (index);
 }
 
-void	is_str_empty(char const *str, size_t *index, size_t *end)
+static void	is_str_empty(char const *str, size_t *index, size_t *end)
 {
 	if (str_len(str) == 0)
 	{
@@ -58,7 +58,7 @@ void	is_str_empty(char const *str, size_t *index, size_t *end)
 		*index = str_len(str) - 1;
 }
 
-size_t	str_non_set_end(char const *str, char const *se)
+static size_t	str_non_set_end(char const *str, char const *se)
 {
 	size_t	index;
 	size_t	index2;

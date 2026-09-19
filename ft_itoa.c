@@ -6,13 +6,13 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 10:30:30 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/17 14:32:27 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/19 21:24:47 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	is_neg(size_t *counter, int *neg, int *n, long *copy)
+static void	is_neg(size_t *counter, int *neg, int *n, long *copy)
 {
 	if ((long)*n < 0)
 	{
@@ -22,7 +22,7 @@ void	is_neg(size_t *counter, int *neg, int *n, long *copy)
 	}
 }
 
-size_t	num_counter(long copy, size_t *counter)
+static size_t	num_counter(long copy, size_t *counter)
 {
 	while (copy > 9)
 	{

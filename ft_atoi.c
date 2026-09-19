@@ -6,17 +6,15 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 14:51:27 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/17 09:40:01 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/19 21:22:36 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_atoi(const char *nptr)
 {
-	size_t	index;
-	int		sign;
-	int		value;
+	int	index;
+	int	sign;
+	int	value;
 
 	index = 0;
 	sign = 1;

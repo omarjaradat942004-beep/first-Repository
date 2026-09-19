@@ -6,20 +6,20 @@
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 22:34:14 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/17 15:29:53 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/19 21:31:49 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_delimiter(char const s, char c)
+static int	is_delimiter(char const s, char c)
 {
 	if (s == c)
 		return (1);
 	return (0);
 }
 
-int	words_number(char const *str, char c)
+static int	words_number(char const *str, char c)
 {
 	size_t	index;
 	size_t	words;
@@ -40,7 +40,7 @@ int	words_number(char const *str, char c)
 	return (words);
 }
 
-char	*copy_str(char const *str, char c)
+static char	*copy_str(char const *str, char c)
 {
 	char	*word;
 	size_t	len;
@@ -62,7 +62,7 @@ char	*copy_str(char const *str, char c)
 	return (word);
 }
 
-void	*clean(char **st, size_t index2)
+static void	*clean(char **st, size_t index2)
 {
 	size_t	index;
 
