@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:25:46 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/18 21:33:18 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/20 12:12:15 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int			ft_isprint(int c);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
 char		*ft_strchr(const char *s, int c);
-size_t		strlcat(char *dst, const char *src, size_t size);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *s);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 int			ft_tolower(int c);
