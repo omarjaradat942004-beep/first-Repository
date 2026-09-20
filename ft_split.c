@@ -6,7 +6,7 @@
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 22:34:14 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/19 21:31:49 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/20 16:23:15 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,8 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[index] && is_delimiter(s[index], c))
 			index++;
+		if (!s[index])
+			break ;
 		st[index2] = copy_str(&s[index], c);
 		if (!st[index2])
 			return (clean(st, index2));

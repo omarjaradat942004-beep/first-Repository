@@ -6,7 +6,7 @@
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 19:13:29 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/18 15:33:35 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/20 16:13:07 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		while (temp ->next != NULL)
 			temp = temp ->next;
 		temp -> next = new;
-		new ->next = NULL;
 	}
 }

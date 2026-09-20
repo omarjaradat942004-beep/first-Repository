@@ -6,7 +6,7 @@
 /*   By: omarjaradat </var/spool/mail/omarjaradat>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 16:16:33 by omarjaradat       #+#    #+#             */
-/*   Updated: 2026/09/19 21:39:48 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/20 16:14:35 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static size_t	str_non_set_start(char const *str, char const *se)
 	return (index);
 }
 
-static void	is_str_empty(char const *str, size_t *index, size_t *end)
+static void	is_str_empty(char const *str, int *index, size_t *end)
 {
 	if (str_len(str) == 0)
 	{
@@ -60,16 +60,15 @@ static void	is_str_empty(char const *str, size_t *index, size_t *end)
 
 static size_t	str_non_set_end(char const *str, char const *se)
 {
-	size_t	index;
+	int		index;
 	size_t	index2;
 	size_t	end;
 
 	is_str_empty(str, &index, &end);
 	end = index + 1;
 	index2 = 0;
-	while (index > 0)
+	while (index >= 0)
 	{
-		index--;
 		while (se[index2])
 		{
 			if (str[index] == se[index2])
@@ -82,6 +81,7 @@ static size_t	str_non_set_end(char const *str, char const *se)
 			break ;
 		}
 		index2 = 0;
+		index--;
 	}
 	return (end);
 }
@@ -93,6 +93,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	counter2;
 	size_t	index;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	index = 0;
 	counter = str_non_set_start(s1, set);
 	counter2 = str_non_set_end(s1, set);
