@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 11:09:32 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/17 14:49:48 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/21 20:28:52 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	index;
 
+	if (!s)
+		return ;
 	index = 0;
 	while (s[index])
 	{

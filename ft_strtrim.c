@@ -6,7 +6,7 @@
 /*   By: omarjaradat </var/spool/mail/omarjaradat>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 16:16:33 by omarjaradat       #+#    #+#             */
-/*   Updated: 2026/09/20 16:14:35 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/21 20:57:18 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,14 @@ static void	is_str_empty(char const *str, int *index, size_t *end)
 {
 	if (str_len(str) == 0)
 	{
-		*index = str_len(str);
-		*end = *index;
+		*index = -1;
+		*end = 0;
 	}
 	else
+	{
 		*index = str_len(str) - 1;
+		*end = str_len(str);
+	}
 }
 
 static size_t	str_non_set_end(char const *str, char const *se)
@@ -65,7 +68,6 @@ static size_t	str_non_set_end(char const *str, char const *se)
 	size_t	end;
 
 	is_str_empty(str, &index, &end);
-	end = index + 1;
 	index2 = 0;
 	while (index >= 0)
 	{
