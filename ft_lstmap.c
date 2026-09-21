@@ -6,18 +6,11 @@
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 17:07:26 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/19 21:27:35 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/21 15:16:55 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void	creat_node_fail(void *new_content, t_list **new_lst_head,
-void (*del)(void *))
-{
-	del(new_content);
-	ft_lstclear(new_lst_head, del);
-}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -31,15 +24,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst != NULL)
 	{
 		new_content = f(lst->content);
-		if (!new_content)
-		{
-			ft_lstclear(&new_lst_head, del);
-			return (NULL);
-		}
 		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
-			creat_node_fail(new_content, &new_lst_head, del);
+			ft_lstclear(&new_lst_head, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_lst_head, new_node);
