@@ -6,7 +6,7 @@
 /*   By: omarjaradat </var/spool/mail/omarjaradat>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 16:16:33 by omarjaradat       #+#    #+#             */
-/*   Updated: 2026/09/21 20:57:18 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/21 21:52:13 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ static size_t	str_non_set_end(char const *str, char const *se)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*ptr;	
+	char	*ptr;
 	size_t	counter;
 	size_t	counter2;
 	size_t	index;

@@ -6,7 +6,7 @@
 /*   By: omajarad <omar.jaradat1@learner.42.tech>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 17:07:26 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/21 20:14:27 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/21 21:49:01 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	void	*new_content;
 	t_list	*new_node;
 
-	if (lst == NULL || f == NULL || del == NULL)
+	if (lst == NULL || f == NULL)
 		return (NULL);
 	new_lst_head = NULL;
 	while (lst != NULL)

@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 14:51:27 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/19 21:22:36 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/09/21 22:00:48 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_atoi(const char *nptr)
 	if (nptr[index] == '+' || nptr[index] == '-')
 	{
 		if (nptr[index] == '-')
-			sign = -sign;
+			sign = -1;
 		index++;
 	}
 	while (nptr[index] >= '0' && nptr[index] <= '9')
